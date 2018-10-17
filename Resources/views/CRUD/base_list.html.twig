@@ -233,7 +233,7 @@ file that was distributed with this source code.
 
 {% block list_filters_actions %}
     {%- if admin.datagrid.filters|length %}
-        <div class="action dropdown">
+        <div class="action dropdown inline">
             <button class="btn  btn-sm rounded-s btn-secondary dropdown-toggle" type="button" id="filters" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'link_filters'|trans({}, 'SonataAdminBundle') }}</button>
             <div class="dropdown-menu" aria-labelledby="filters">
                 {% for filter in admin.datagrid.filters if (filter.options['show_filter'] is same as(true) or filter.options['show_filter'] is null) %}
