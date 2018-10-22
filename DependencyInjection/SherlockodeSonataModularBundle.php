@@ -28,9 +28,10 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
         if (isset($bundles['SonataAdminBundle'])) {
             $config = [
                 'templates' => [
-                    'list'   => 'SherlockodeSonataModularBundle:CRUD:list.html.twig',
-                    'edit'   => 'SherlockodeSonataModularBundle:CRUD:edit.html.twig',
-                    'layout' => 'SherlockodeSonataModularBundle::standard_layout.html.twig',
+                    'list'              => 'SherlockodeSonataModularBundle:CRUD:list.html.twig',
+                    'edit'              => 'SherlockodeSonataModularBundle:CRUD:edit.html.twig',
+                    'layout'            => 'SherlockodeSonataModularBundle::standard_layout.html.twig',
+                    'knp_menu_template' => 'SherlockodeSonataModularBundle:Menu:sonata_menu.html.twig',
                 ],
                 'assets'    => [
                     'stylesheets' => [
@@ -56,6 +57,7 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                         'bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
                         'bundles/sonataadmin/vendor/jqueryui/ui/minified/jquery-ui.min.js',
                         'bundles/sonataadmin/vendor/jqueryui/ui/minified/i18n/jquery-ui-i18n.min.js',
+                        'bundles/sonataadmin/vendor/admin-lte/dist/js/app.min.js',
                         'bundles/sonataadmin/vendor/jquery-form/jquery.form.js',
                         'bundles/sonataadmin/jquery/jquery.confirmExit.js',
                         'bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js',
