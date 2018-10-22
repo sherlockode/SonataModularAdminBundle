@@ -1,0 +1,94 @@
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: inherit;
+    float: left;
+    display: inline;
+}
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+}
+.navbar-top-links li {
+    display: inline-block;
+}
+
+.breadcrumb>li {
+    display: inline-block;
+    position: relative;
+}
+
+.header-block-nav li > a {
+    display: inline;
+}
+
+.card-block .table {
+    margin-bottom: 0
+}
+
+.navbar-right .fa-plus-circle {
+    display: none;
+}
+
+.navbar-header .title {
+    float:left;
+}
+
+.navbar-header .action-button {
+    float:right;
+}
+
+.navbar-header .dropdown-menu .btn {
+    background-color: transparent;
+    border: 0;
+    color: #777;
+}
+
+.dropdown-menu {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.dropdown-menu a {
+    min-height: 21px;
+    padding: 0 15px;
+    clear: both;
+    font-weight: normal;
+    color: #4f5f6f;
+    white-space: nowrap;
+    -webkit-transition: none;
+    transition: none;
+    text-decoration: none;
+}
+
+.dropdown-menu a.btn {
+    text-align: left;
+}
+
+.dropdown-menu > li > a.btn:hover {
+    background-color: #e1e3e9;
+    color: #333;
+    text-decoration: underline;
+}
+
+.dropdown-menu > li > a.btn.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: #e1e3e9;
+    color: #333;
+}
+
+.sonata-ba-list-field-actions .btn-default{
+    background-color: #85CE36;
+    border-color: #85CE36;
+}
+
+.sonata-ba-list-field-actions .btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(133, 206, 54, 0.5);
+}
+
+.sonata-ba-list-field-actions a:hover, .sonata-ba-list-field-actions a:active, .sonata-ba-list-field-actions a:focus {
+    color: white;
+}
+
+
