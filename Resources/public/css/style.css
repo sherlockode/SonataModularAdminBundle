@@ -103,3 +103,8 @@
     vertical-align: baseline;
     border-radius: .25em;
 }
+
+.nav-tabs-custom>.nav-tabs>li.active,
+.box.box-primary {
+    border-top-color: #85CE36;
+}
