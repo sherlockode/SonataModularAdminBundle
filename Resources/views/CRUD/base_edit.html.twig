@@ -25,7 +25,7 @@ file that was distributed with this source code.
 {% endblock %}
 
 {%- block actions -%}
-    {% include '@App/CRUD/action_buttons.html.twig' %}
+    {% include '@SonataAdmin/CRUD/action_buttons.html.twig' %}
 {%- endblock -%}
 
 {%- block tab_menu -%}
@@ -35,7 +35,7 @@ file that was distributed with this source code.
     }, 'twig') }}
 {%- endblock -%}
 
-{% use '@App/CRUD/base_edit_form.html.twig' with form as parentForm %}
+{% use '@SherlockodeSonataModular/CRUD/base_edit_form.html.twig' with form as parentForm %}
 
 {% block form %}
     {{ block('parentForm') }}

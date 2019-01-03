@@ -47,9 +47,9 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                         'bundles/sonatacore/vendor/select2-bootstrap-css/select2-bootstrap.min.css',
                         'bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css',
                         'bundles/sonataadmin/css/tree.css',
-                        'bundle/sherlockodesonatamodular/css/test/vendor.css',
-                        'bundle/sherlockodesonatamodular/css/test/app.css',
-                        'bundle/sherlockodesonatamodular/css/test/style.css',
+                        'bundles/sherlockodesonatamodular/css/vendor.css',
+                        'bundles/sherlockodesonatamodular/css/app.css',
+                        'bundles/sherlockodesonatamodular/css/style.css',
                     ],
                     'javascripts' => [
                         'bundles/sonatacore/vendor/jquery/dist/jquery.min.js',
@@ -72,8 +72,8 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                         'bundles/sonataadmin/Admin.js',
                         'bundles/sonataadmin/treeview.js',
                         'bundles/sonataadmin/sidebar.js',
-                        'bundle/sherlockodesonatamodular/js/vendor.js',
-                        'bundle/sherlockodesonatamodular/js/app.js',
+                        'bundles/sherlockodesonatamodular/js/vendor.js',
+                        'bundles/sherlockodesonatamodular/js/app.js',
                     ],
                 ],
             ];
