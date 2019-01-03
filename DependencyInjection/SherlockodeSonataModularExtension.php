@@ -34,6 +34,7 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                     'layout'            => 'SherlockodeSonataModularBundle::standard_layout.html.twig',
                     'knp_menu_template' => 'SherlockodeSonataModularBundle:Menu:sonata_menu.html.twig',
                     'button_create'     => 'SherlockodeSonataModularBundle:Button:create_button.html.twig',
+                    'pager_links'       => 'SherlockodeSonataModularBundle:Pager:links.html.twig',
                 ],
                 'assets'    => [
                     'stylesheets' => [
