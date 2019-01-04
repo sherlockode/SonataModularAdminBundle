@@ -300,18 +300,10 @@ file that was distributed with this source code.
 
                                                         {% block sonata_admin_content_actions_wrappers %}
                                                             {% if _actions|replace({ '<li>': '', '</li>': '' })|trim is not empty %}
-                                                                <ul class="nav navbar-nav navbar-right pull-right">
-                                                                    {% if _actions|split('</a>')|length > 2 %}
-                                                                        <li class="dropdown sonata-actions">
-                                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ 'link_actions'|trans({}, 'SonataAdminBundle') }} <b class="caret"></b></a>
-                                                                            <ul class="dropdown-menu" role="menu">
-                                                                                {{ _actions|raw }}
-                                                                            </ul>
-                                                                        </li>
-                                                                    {% else %}
-                                                                        {{ _actions|raw }}
-                                                                    {% endif %}
-                                                                </ul>
+                                                                <button class="btn  btn-sm rounded-s btn-secondary dropdown-toggle pull-right" type="button" id="filters" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'link_actions'|trans({}, 'SonataAdminBundle') }}</button>
+                                                                <div class="dropdown-menu" aria-labelledby="filters">
+                                                                    {{ _actions|raw }}
+                                                                </div>
                                                             {% endif %}
                                                         {% endblock sonata_admin_content_actions_wrappers %}
 
