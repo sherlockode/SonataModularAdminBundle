@@ -42,7 +42,7 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                         'bundles/sonatacore/vendor/ionicons/css/ionicons.min.css',
                         'bundles/sonataadmin/vendor/admin-lte/dist/css/AdminLTE.min.css',
                         'bundles/sonataadmin/vendor/admin-lte/dist/css/skins/skin-black.min.css',
-                        'bundles/sonataadmin/vendor/iCheck/skins/square/blue.css"',
+                        'bundles/sonataadmin/vendor/iCheck/skins/square/blue.css',
                         'bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
                         'bundles/sonatacore/vendor/select2/select2.css',
                         'bundles/sonatacore/vendor/select2-bootstrap-css/select2-bootstrap.min.css',
