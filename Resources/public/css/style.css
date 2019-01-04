@@ -119,3 +119,8 @@
 .card-footer .checkbox {
     display: inline;
 }
+
+.custom-control-label::before,
+.custom-control-label::after {
+    display: none;
+}
