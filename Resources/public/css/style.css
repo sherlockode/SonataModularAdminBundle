@@ -115,3 +115,7 @@
     color:initial;
     background: initial;
 }
+
+.card-footer .checkbox {
+    display: inline;
+}
