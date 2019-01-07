@@ -138,7 +138,7 @@ file that was distributed with this source code.
                                     <form action="{{ path('sonata_admin_search') }}" method="GET" role="search">
                                         <div class="input-container">
                                             <i class="fa fa-search"></i>
-                                            <input type="search" placeholder="Search">
+                                            <input type="search" name="q" value="{{ app.request.get('q') }}" placeholder="{{ 'search_placeholder'|trans({}, 'SonataAdminBundle') }}">
                                             <div class="underline"></div>
                                         </div>
                                     </form>
