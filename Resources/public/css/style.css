@@ -124,3 +124,8 @@
 .custom-control-label::after {
     display: none;
 }
+
+.btn.sonata-collection-delete,
+.btn.sonata-collection-add {
+    color: initial;
+}
