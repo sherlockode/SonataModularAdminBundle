@@ -28,16 +28,17 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
         if (isset($bundles['SonataAdminBundle'])) {
             $config = [
                 'templates' => [
-                    'list'              => 'SherlockodeSonataModularBundle:CRUD:list.html.twig',
-                    'show'              => 'SherlockodeSonataModularBundle:CRUD:show.html.twig',
-                    'edit'              => 'SherlockodeSonataModularBundle:CRUD:edit.html.twig',
-                    'layout'            => 'SherlockodeSonataModularBundle::standard_layout.html.twig',
-                    'knp_menu_template' => 'SherlockodeSonataModularBundle:Menu:sonata_menu.html.twig',
-                    'button_create'     => 'SherlockodeSonataModularBundle:Button:create_button.html.twig',
-                    'button_edit'       => 'SherlockodeSonataModularBundle:Button:edit_button.html.twig',
-                    'button_show'       => 'SherlockodeSonataModularBundle:Button:show_button.html.twig',
-                    'button_list'       => 'SherlockodeSonataModularBundle:Button:list_button.html.twig',
-                    'pager_links'       => 'SherlockodeSonataModularBundle:Pager:links.html.twig',
+                    'list'                => '@SherlockodeSonataModular/CRUD/list.html.twig',
+                    'show'                => '@SherlockodeSonataModular/CRUD/show.html.twig',
+                    'edit'                => '@SherlockodeSonataModular/CRUD/edit.html.twig',
+                    'layout'              => '@SherlockodeSonataModular/standard_layout.html.twig',
+                    'knp_menu_template'   => '@SherlockodeSonataModular/Menu/sonata_menu.html.twig',
+                    'button_create'       => '@SherlockodeSonataModular/Button/create_button.html.twig',
+                    'button_edit'         => '@SherlockodeSonataModular/Button/edit_button.html.twig',
+                    'button_show'         => '@SherlockodeSonataModular/Button/show_button.html.twig',
+                    'button_list'         => '@SherlockodeSonataModular/Button/list_button.html.twig',
+                    'pager_links'         => '@SherlockodeSonataModular/Pager/links.html.twig',
+                    'search_result_block' => '@SherlockodeSonataModular:Block:block_search_result.html.twig',
                 ],
                 'assets'    => [
                     'stylesheets' => [
