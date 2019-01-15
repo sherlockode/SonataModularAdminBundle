@@ -1,0 +1,23 @@
+{
+    "name": "sherlockode/sonata-modular-bundle",
+    "description": "Symfony SonataAdminBundle themed with Modular",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Sherlockode",
+            "email": "contact@sherlockode.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Sherlockode\\SonataModularBundle\\": "" }
+    },
+    "require": {
+        "sonata-project/admin-bundle": "^3.14"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
