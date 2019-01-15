@@ -163,3 +163,7 @@ body,
 .sonata-search-result-show .list-group-item:first-child {
     border: none;
 }
+
+.custom-control {
+    padding-left: 0;
+}
