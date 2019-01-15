@@ -1,0 +1,22 @@
+{% extends '@SonataAdmin/Form/form_admin_fields.html.twig' %}
+
+{% block sonata_type_native_collection_widget_row %}
+    {% spaceless %}
+        <div class="sonata-collection-row">
+            {% if allow_delete %}
+            <div class="row">
+                <div class="col-1">
+                    <a href="#" class="btn btn-link sonata-collection-delete">
+                        <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-11">
+                    {% endif %}
+                    {{ form_row(child, { label: false }) }}
+                    {% if allow_delete %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    {% endspaceless %}
+{% endblock sonata_type_native_collection_widget_row %}
