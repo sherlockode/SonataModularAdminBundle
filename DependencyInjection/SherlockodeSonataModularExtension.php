@@ -81,6 +81,17 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
             ];
 
             $container->prependExtensionConfig('sonata_admin', $config);
+
+            $bundles = $container->getParameter('kernel.bundles');
+            if (isset($bundles['SonataAdminBundle'])) {
+                $config = [
+                    'templates' => [
+                        'form' => ['@SherlockodeSonataModular/Form/form_admin_fields.html.twig'],
+                    ],
+                ];
+
+                $container->prependExtensionConfig('sonata_doctrine_orm_admin', $config);
+            }
         }
     }
 }
