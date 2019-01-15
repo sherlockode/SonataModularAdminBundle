@@ -172,3 +172,20 @@ body,
 .custom-control {
     padding-left: 0;
 }
+
+.dropdown-menu a.sonata-action-element {
+    display: block;
+    padding: 0 15px;
+    clear: both;
+    font-weight: normal;
+    color: #4f5f6f;
+    white-space: nowrap;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.dropdown-menu a:hover {
+    color: #85CE36 !important;
+    background: none;
+    background-color: whitesmoke;
+}
