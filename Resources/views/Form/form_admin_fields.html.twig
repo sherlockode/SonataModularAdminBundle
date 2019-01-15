@@ -1,5 +1,29 @@
-{% extends '@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig' %}
+{% extends '@SherlockodeSonataModular/Form/basic_form_admin_fields.html.twig' %}
 
 {% block sonata_admin_orm_one_to_many_widget %}
     {% include '@SherlockodeSonataModular/CRUD/Association/edit_one_to_many.html.twig' %}
+{% endblock %}
+
+{% block sonata_admin_orm_many_to_many_widget %}
+    {{ block("sonata_admin_orm_many_to_many_widget", "@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig") }}
+{% endblock %}
+
+{% block sonata_admin_orm_many_to_one_widget %}
+    {{ block("sonata_admin_orm_many_to_one_widget", "@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig") }}
+{% endblock %}
+
+{% block sonata_type_model_widget %}
+    {{ block("sonata_type_model_widget", "@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig") }}
+{% endblock %}
+
+{% block sonata_type_model_list_widget %}
+    {{ block("sonata_type_model_list_widget", "@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig") }}
+{% endblock %}
+
+{% block sonata_type_admin_widget %}
+    {{ block("sonata_type_admin_widget", "@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig") }}
+{% endblock %}
+
+{% block sonata_type_collection_widget %}
+    {{ block("sonata_type_collection_widget", "@SonataDoctrineORMAdmin/Form/form_admin_fields.html.twig") }}
 {% endblock %}
