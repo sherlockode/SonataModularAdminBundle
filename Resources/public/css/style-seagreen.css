@@ -1,0 +1,17 @@
+.sonata-ba-list-field-actions .btn-default{
+    background-color: #4bcf99;
+    border-color: #4bcf99;
+}
+
+.sonata-ba-list-field-actions .btn:focus, .btn.focus {
+    box-shadow: 0 0 0 0.2rem rgba(75, 207, 153, 0.5);
+}
+
+.nav-tabs-custom>.nav-tabs>li.active,
+.box.box-primary {
+    border-top-color: #4bcf99;
+}
+
+.dropdown-menu a:hover {
+    color: #4bcf99 !important;
+}
