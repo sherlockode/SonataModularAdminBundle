@@ -24,6 +24,8 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
 
     public function prepend(ContainerBuilder $container)
     {
+        $bundleConfiguration = $container->getExtensionConfig('sherlockode_sonata_modular')[0];
+
         $bundles = $container->getParameter('kernel.bundles');
         if (isset($bundles['SonataAdminBundle'])) {
             $config = [
@@ -38,7 +40,7 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                     'button_show'         => '@SherlockodeSonataModular/Button/show_button.html.twig',
                     'button_list'         => '@SherlockodeSonataModular/Button/list_button.html.twig',
                     'pager_links'         => '@SherlockodeSonataModular/Pager/links.html.twig',
-                    'search_result_block' => '@SherlockodeSonataModular:Block:block_search_result.html.twig',
+                    'search_result_block' => '@SherlockodeSonataModular/Block/block_search_result.html.twig',
                 ],
                 'assets'    => [
                     'stylesheets' => [
@@ -53,8 +55,6 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                         'bundles/sonataadmin/vendor/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css',
                         'bundles/sonataadmin/css/tree.css',
                         'bundles/sherlockodesonatamodular/css/vendor.css',
-                        'bundles/sherlockodesonatamodular/css/app.css',
-                        'bundles/sherlockodesonatamodular/css/style.css',
                     ],
                     'javascripts' => [
                         'bundles/sherlockodesonatamodular/js/vendor.js',
@@ -79,6 +79,40 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                     ],
                 ],
             ];
+
+            if (isset($bundleConfiguration['color'])) {
+                switch ($bundleConfiguration['color']) {
+                    case 'blue':
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-blue.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-blue.css';
+                        break;
+                    case 'orange':
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-orange.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-orange.css';
+                        break;
+                    case 'purple':
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-purple.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-purple.css';
+                        break;
+                    case 'red':
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-red.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-red.css';
+                        break;
+                    case 'seagreen':
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-seagreen.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-seagreen.css';
+                        break;
+                    default:
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-green.css';
+                        break;
+                }
+            } else {
+                $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app.css';
+                $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-green.css';
+            }
+
+            $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style.css';
 
             $container->prependExtensionConfig('sonata_admin', $config);
 

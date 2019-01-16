@@ -92,14 +92,8 @@ body,
     color: #333;
 }
 
-.sonata-ba-list-field-actions .btn-default{
-    background-color: #85CE36;
-    border-color: #85CE36;
-}
-
 .sonata-ba-list-field-actions .btn:focus, .btn.focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(133, 206, 54, 0.5);
 }
 
 .sonata-ba-list-field-actions a:hover, .sonata-ba-list-field-actions a:active, .sonata-ba-list-field-actions a:focus {
@@ -117,11 +111,6 @@ body,
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: .25em;
-}
-
-.nav-tabs-custom>.nav-tabs>li.active,
-.box.box-primary {
-    border-top-color: #85CE36;
 }
 
 .nav.breadcrumb>li>a:hover,
@@ -185,7 +174,6 @@ body,
 }
 
 .dropdown-menu a:hover {
-    color: #85CE36 !important;
     background: none;
     background-color: whitesmoke;
 }
