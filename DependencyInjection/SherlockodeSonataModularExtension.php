@@ -48,7 +48,6 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                         'bundles/sonatacore/vendor/ionicons/css/ionicons.min.css',
                         'bundles/sonataadmin/vendor/admin-lte/dist/css/AdminLTE.min.css',
                         'bundles/sonataadmin/vendor/admin-lte/dist/css/skins/skin-black.min.css',
-                        'bundles/sonataadmin/vendor/iCheck/skins/square/blue.css',
                         'bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
                         'bundles/sonatacore/vendor/select2/select2.css',
                         'bundles/sonatacore/vendor/select2-bootstrap-css/select2-bootstrap.min.css',
@@ -85,31 +84,43 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                     case 'blue':
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-blue.css';
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-blue.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/icheck/blue.css';
                         break;
                     case 'orange':
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-orange.css';
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-orange.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/icheck/orange.css';
+
                         break;
                     case 'purple':
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-purple.css';
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-purple.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/icheck/purple.css';
+
                         break;
                     case 'red':
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-red.css';
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-red.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/icheck/red.css';
+
                         break;
                     case 'seagreen':
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app-seagreen.css';
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-seagreen.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/icheck/seagreen.css';
+
                         break;
                     default:
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app.css';
                         $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-green.css';
+                        $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/icheck/green.css';
+
                         break;
                 }
             } else {
                 $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/app.css';
                 $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style-green.css';
+                $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/icheck/green.css';
             }
 
             $config['assets']['stylesheets'][] = 'bundles/sherlockodesonatamodular/css/style.css';
