@@ -8,7 +8,7 @@ This bundle automatically defines a default configuration for sonata admin, so t
 composer require sherlockode/sonata-modular-bundle
 ```
 
-##Color option
+###Color option
 
 By default the plugin is loaded with the green them.
 
