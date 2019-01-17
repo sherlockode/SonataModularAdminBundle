@@ -41,6 +41,7 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
                     'button_list'         => '@SherlockodeSonataModular/Button/list_button.html.twig',
                     'pager_links'         => '@SherlockodeSonataModular/Pager/links.html.twig',
                     'search_result_block' => '@SherlockodeSonataModular/Block/block_search_result.html.twig',
+                    'list_block'          => '@SherlockodeSonataModular/Block/block_admin_list.html.twig',
                 ],
                 'assets'    => [
                     'stylesheets' => [
