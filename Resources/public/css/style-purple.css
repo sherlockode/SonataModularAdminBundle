@@ -15,3 +15,7 @@
 .dropdown-menu a:hover {
     color: #7867A7 !important;
 }
+
+.select2-results .select2-highlighted {
+    background-color: #7867A7;
+}
