@@ -2,11 +2,13 @@
 
 namespace Sherlockode\SonataModularBundle\DependencyInjection;
 
+use Sherlockode\SonataModularBundle\Twig\Extension\ModularExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
-use Symfony\Component\DependencyInjection\Loader;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
  * This is the class that loads and manages your bundle configuration.
@@ -20,13 +22,14 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
     }
 
     public function prepend(ContainerBuilder $container)
     {
         $bundleConfiguration = $container->getExtensionConfig('sherlockode_sonata_modular')[0];
-
         $bundles = $container->getParameter('kernel.bundles');
+
         if (isset($bundles['SonataAdminBundle'])) {
             $config = [
                 'templates' => [
@@ -128,16 +131,32 @@ class SherlockodeSonataModularExtension extends Extension implements PrependExte
 
             $container->prependExtensionConfig('sonata_admin', $config);
 
-            $bundles = $container->getParameter('kernel.bundles');
-            if (isset($bundles['SonataAdminBundle'])) {
-                $config = [
-                    'templates' => [
-                        'form' => ['@SherlockodeSonataModular/Form/form_admin_fields.html.twig'],
-                    ],
-                ];
+            $config = [
+                'templates' => [
+                    'form' => ['@SherlockodeSonataModular/Form/form_admin_fields.html.twig'],
+                ],
+            ];
 
-                $container->prependExtensionConfig('sonata_doctrine_orm_admin', $config);
+            $container->prependExtensionConfig('sonata_doctrine_orm_admin', $config);
+
+            $modularClass = [];
+            if (isset($bundleConfiguration['fixed'])) {
+                if(isset($bundleConfiguration['fixed']['sidebar']) && true === $bundleConfiguration['fixed']['sidebar']) {
+                    $modularClass['sidebar'] = true;
+                }
+                if(isset($bundleConfiguration['fixed']['header']) && true === $bundleConfiguration['fixed']['header']) {
+                    $modularClass['header'] = true;
+                }
+                if(isset($bundleConfiguration['fixed']['footer']) && true === $bundleConfiguration['fixed']['footer']) {
+                    $modularClass['footer'] = true;
+                }
             }
+
+            $definition = new Definition(ModularExtension::class);
+            $definition->setPublic(true);
+            $definition->addTag('twig.extension', []);
+            $definition->addArgument($modularClass);
+            $container->setDefinition('sherlockode_modular.twig.extension', $definition);
         }
     }
 }

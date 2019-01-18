@@ -21,6 +21,22 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue('green')
                     ->info('The admin color')
                 ->end()
+                ->scalarNode('fixed')
+                    ->children()
+                        ->scalarNode('sidebar')
+                            ->defaultValue('false')
+                            ->info('Define if the footer is fixed')
+                        ->end()
+                        ->scalarNode('header')
+                            ->defaultValue('false')
+                            ->info('Define if the header is fixed')
+                        ->end()
+                        ->scalarNode('footer')
+                            ->defaultValue('false')
+                            ->info('Define if the footer is fixed')
+                        ->end()
+                    ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;
